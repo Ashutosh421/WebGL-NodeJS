@@ -1,0 +1,120 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>WebGLExpo</Name>
+    <RootNamespace>WebGLTutorials</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7301220a-120d-4ee8-a7bb-faaa2525fad0</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="public\JS\CustomMath\Vector.js" />
+    <Compile Include="public\JS\Lights\DirectionLight.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Lights\LightInterface.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\main.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Plugins\gl-matrix.js" />
+    <Compile Include="public\JS\Primitives\Cube.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Primitives\Model.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Primitives\Primitive.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Primitives\Quad.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Primitives\Triangle.js" />
+    <Compile Include="public\JS\Utils\Graphics-Utils\Camera.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Utils\Graphics-Utils\Shader.js" />
+    <Compile Include="public\JS\Utils\Graphics-Utils\Texture2D.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Utils\Graphics-Utils\Transform.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Utils\Graphics-Utils\Vertex.js" />
+    <Compile Include="public\JS\Utils\Time.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\Utils\Utils.js" />
+    <Compile Include="public\JS\Window.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\JS\require.js" />
+    <Content Include="index.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="package.json" />
+    <Content Include="public\Models\Fbx\Handgun2.fbx" />
+    <Content Include="public\Models\Fbx\Handgun2.json" />
+    <Content Include="public\Models\Fbx\handgun_C.jpg" />
+    <Content Include="public\Models\Fbx\Susan.fbx" />
+    <Content Include="public\Models\Fbx\Susan.json" />
+    <Content Include="public\Models\Fbx\SusanTexture.png" />
+    <Content Include="public\Shaders\DirectionalLit\fragmentShader_DLit.frag" />
+    <Content Include="public\Shaders\VertexLit\fragmentShader2.frag" />
+    <Content Include="public\Shaders\VertexLit\fragmentShader.frag" />
+    <Content Include="public\Shaders\VertexLit\vertexShader2 - Copy.vert" />
+    <Content Include="public\Shaders\DirectionalLit\vertexShader_DLit.vert" />
+    <Content Include="public\Shaders\VertexLit\vertexShader.vert" />
+    <Content Include="public\Textures\WallTexture.jpg" />
+    <Content Include="public\Textures\WallTexture_2.jpg" />
+    <Content Include="public\Textures\WallTexture_3.jpg" />
+    <Content Include="public\Textures\WallTexture_4.jpg" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\JS\" />
+    <Folder Include="public\JS\CustomMath\" />
+    <Folder Include="public\JS\Lights\" />
+    <Folder Include="public\JS\Plugins\" />
+    <Folder Include="public\JS\Primitives\" />
+    <Folder Include="public\JS\Utils\" />
+    <Folder Include="public\JS\Utils\Graphics-Utils\" />
+    <Folder Include="public\Models\" />
+    <Folder Include="public\Models\Fbx\" />
+    <Folder Include="public\Shaders\" />
+    <Folder Include="public\Shaders\DirectionalLit\" />
+    <Folder Include="public\Shaders\VertexLit\" />
+    <Folder Include="public\Textures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="webgl.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>

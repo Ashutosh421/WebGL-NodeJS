@@ -1,0 +1,14 @@
+{
+  "name": "web-gltutorials",
+  "version": "0.0.0",
+  "description": "WebGLTutorials",
+  "main": "app.js",
+  "author": "Ashutosh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "gl-api": "^1.0.3",
+    "gl-matrix": "^2.4.0",
+    "nodemon": "^1.11.0"
+  }
+}
